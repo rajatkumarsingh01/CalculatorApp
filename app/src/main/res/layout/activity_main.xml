@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+  android:paddingTop="32dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    tools:context=".MainActivity">
+
+    <!-- Display TextView -->
+    <TextView
+        android:id="@+id/displayTextView"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="80sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="end"/>
+
+
+
+    <!-- Row 1 -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/btnbackground_design"
+
+        android:onClick="onButtonClick"
+
+        android:text="1"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayTextView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="2"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/displayTextView" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="45dp"
+
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="3"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/displayTextView" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onOperatorClick"
+        android:text="+"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/displayTextView" />
+
+    <!-- Row 2 -->
+    <Button
+
+        android:id="@+id/button4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="4"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="5"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="6"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onOperatorClick"
+        android:text="-"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+
+    <!-- Add buttons for 4, 5, 6, and - here following the same pattern -->
+
+    <!-- Row 3 -->
+    <Button
+
+        android:id="@+id/button7"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="7"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="8"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="9"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onOperatorClick"
+        android:text="*"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+    <!-- Add buttons for 7, 8, 9, and * here following the same pattern -->
+
+    <!-- Row 4 -->
+    <Button
+
+        android:id="@+id/buttonPI"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="π"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/buttonDot"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="."
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="0"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onOperatorClick"
+        android:text="/"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+    <!-- Add buttons for 0, C (clear), =, and / here following the same pattern -->
+
+    <Button
+
+        android:id="@+id/buttonMore"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="More"
+        android:textSize="18sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPI" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="AC"
+        android:textSize="30sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDot" />
+
+    <Button
+        android:id="@+id/buttonPercentage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onButtonClick"
+        android:text="%"
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button0" />
+
+    <Button
+        android:id="@+id/buttonEqual"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/btnbackground_design"
+        android:onClick="onOperatorClick"
+        android:text="="
+        android:textSize="40sp"
+        app:backgroundTint="#292929"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
